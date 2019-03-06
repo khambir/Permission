@@ -90,7 +90,7 @@ internal class DisabledAlert: PermissionAlert {
         super.init(permission: permission)
         
         title   = "Нет доступа к \(permission)"
-        message = "Вы можете включить доступ к \(permission) в настройках приложения"
+        message = "Включите его в настройках телефона"
         cancel  = "ОК"
     }
 }
@@ -113,7 +113,7 @@ internal class DeniedAlert: PermissionAlert {
         super.init(permission: permission)
         
         title    = "Доступ к \(permission) был запрещён"
-        message  = "Вы можете включить доступ к \(permission) в Настройках"
+        message  = "Включите его в настройках телефона"
         cancel   = "Отменить"
         settings = "Настройки"
     }
@@ -150,7 +150,7 @@ internal class PrePermissionAlert: PermissionAlert {
         super.init(permission: permission)
         
         title   = "\(Bundle.main.name) запрашивает доступ к \(permission)"
-        message = "Разрешить доступ к \(permission)?"
+        message = nil
         cancel  = "Отменить"
         confirm = "Разрешить"
     }
